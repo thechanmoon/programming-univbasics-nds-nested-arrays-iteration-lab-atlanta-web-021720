@@ -33,4 +33,9 @@ def total_even_pairs(src)
   # As a reminder any number % 2 will return 0 or 1. If the result is 0, then
   # the number was even. Review the operator documentation if you've forgotten
   # this!
+  retVal = 0
+  src.length.times do |index_i|
+      retArray + = (src[index_i][0]%2 == 0 && src[index_i][1]%2 == 0 ? src[index_i][0]+src[index_i][1]: 0)
+  end
+  return retVal
 end

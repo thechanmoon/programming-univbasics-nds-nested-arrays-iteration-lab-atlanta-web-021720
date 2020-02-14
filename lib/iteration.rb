@@ -18,8 +18,11 @@ def find_greater_pair(src)
   # Produce a new Array that contains the larger number of each of the pairs
   # that are in the inner Arrays
   
-  retArray
-  
+  retArray =[]
+  src.length.times do |index_i|
+      retArray.push(src[index_i][0]>src[index_i][1]?src[index_i][0]:src[index_i][1])
+  end
+  return retArray
 end
 
 def total_even_pairs(src)

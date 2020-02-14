@@ -5,8 +5,12 @@ def join_ingredients(src)
   # inserted into this template:
   #
   # "I love (inner array element 0) and (inner array element 1) on my pizza""
-  # As such, there should be a new String for each inner array, or pair
-  return src.flatten
+  # As such, there should be a new String for each inner array, or pair\
+  retArray = []
+  src.length.times do |index_i|
+      retArray.push("I love #{src[index_i][0]} and #{src[index_i][1]} on my pizza")
+  end
+  return retArray
 end
 
 def find_greater_pair(src)
